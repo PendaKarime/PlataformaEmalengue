@@ -85,10 +85,10 @@ nav {
 /************ CATEGORIAS DE MENU CURSOS *************/
 .menu-cursos .menu-curso-container {
   position: relative;
-  margin-left: 1rem;
-  top: 0;
   border-radius: 0px 10px 10px 10px;
   box-shadow: 1px 2px 10px #ccc;
+  margin-left: 1rem;
+  top: 0;
   /***Dropdown cursos***/
   display: none;
   transition: 1s;
@@ -104,59 +104,9 @@ nav {
   outline: none !important;
 }
 .menu-cursos .menu-curso-container ul li:hover {
-  color: rgb(3, 3, 83);
   transform: translateX(8px);
   border-radius: 30px;
   transition: ease-in-out 0.4s;
-}
-
-/*********** SUB CATEGORIAS DOS CURSOS ************/
-.ti-container,
-.dev-container,
-.negocio-container,
-.fin-cont-container,
-.prod-esc-container,
-.design-container,
-.marketing-container,
-.est-vida-container,
-.Fot-vid-container,
-.saud-fit-container,
-.ensino-container,
-.desnvol-pes-container,
-.musica-container,
-.desnvol-pes-container {
-  position: absolute;
-  background-color: #eee;
-  left: 4rem;
-  padding-left: 1.5rem !important;
-  display: none;
-  box-shadow: 1px 2px 5px #aaa;
-  font-size: 15px;
-  z-index: 1;
-  text-transform: capitalize;
-}
-
-.ti-software:hover > .ti-container,
-.est-vida:hover > .est-vida-container,
-.Fot-vid:hover > .Fot-vid-container,
-.saud-fit:hover > .saud-fit-container,
-.ensino:hover > .ensino-container,
-.marketing:hover > .marketing-container,
-.design:hover > .design-container,
-.negocio:hover > .negocio-container,
-.fin-cont:hover > .fin-cont-container,
-.prod-esc:hover > .prod-esc-container,
-.dev:hover > .dev-container,
-.desnvol-pes:hover > .desnvol-pes-container {
-  display: block;
-  top: 1.4rem;
-  z-index: 100;
-}
-
-.musica:hover > .musica-container {
-  display: block;
-  bottom: 0.4rem;
-  z-index: 100;
 }
 
 .menu-cursos:hover > .menu-curso-container {
@@ -167,6 +117,42 @@ nav {
 
 .menu-cursos:hover {
   margin-top: 11.5rem;
+}
+
+/************* CATEGORIA DOS FREEELANCERS **************/
+.freelance-menu .freelance-menu-container {
+  position: relative;
+  border-radius: 0px 10px 10px 10px;
+  box-shadow: 1px 2px 10px #ccc;
+  margin-left: 1rem;
+  top: 0;
+  /***Dropdown cursos***/
+  display: none;
+  transition: 1s;
+}
+.freelance-menu .freelance-menu-container ul {
+  padding: 0;
+  margin: 12px;
+}
+.freelance-menu .freelance-menu-container ul li {
+  width: 100%;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+.freelance-menu .freelance-menu-container ul li:hover {
+  transform: translateX(8px);
+  border-radius: 30px;
+  transition: ease-in-out 0.4s;
+}
+
+.freelance-menu:hover > .freelance-menu-container {
+  display: block;
+  transition: ease-in 0.5s;
+  z-index: 2;
+}
+
+.freelance-menu:hover {
+  margin-top: 6.5rem;
 }
 
 /****** CALLING BUTTON ANIMATION *******/
@@ -761,6 +747,149 @@ main {
 }
 
 /***********tESTEMUNHOS END *****************/
+#fr_init_section {
+  margin-top: 4rem;
+  width: 100%;
+}
+#fr_init_section .fr_calling {
+  width: 100% !important;
+  margin-bottom: -1rem !important;
+  margin: 0 auto;
+}
+#fr_init_section .fr_calling a {
+  margin-bottom: 10px;
+}
+#fr_init_section select {
+  margin-bottom: 10px;
+}
+#fr_init_section .fr_search {
+  margin-bottom: 10px;
+}
+#fr_init_section .fr_search button {
+  margin-left: 10px;
+}
+#fr_init_section form {
+  margin-bottom: -1rem;
+}
+
+#freelancer_display {
+  padding-top: 3rem;
+  width: 100%;
+  background-color: #eee;
+}
+#freelancer_display .fr_heart {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+#freelancer_display .fr_heart i {
+  color: #fff;
+  font-size: 25px;
+}
+#freelancer_display .fr_dis_container {
+  width: 100%;
+  margin: 0 auto;
+}
+#freelancer_display .fr_dis_container .fr_dis_card {
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 2rem;
+}
+#freelancer_display .fr_dis_container .fr_dis_card img {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+#freelancer_display .fr_dis_container .fr_dis_card_contente {
+  margin-top: 15px;
+}
+#freelancer_display .fr_dis_container .fr_dis_card_contente .fr_dis_user {
+  display: flex;
+  align-items: center;
+}
+#freelancer_display .fr_dis_container .fr_dis_card_contente .fr_dis_user img {
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  margin-right: 8px;
+  margin-top: 0;
+}
+#freelancer_display .fr_dis_container .fr_dis_card_contente .fr_dis_user h5 {
+  font-size: 15px;
+  padding-top: 8px;
+}
+#freelancer_display .fr_dis_container .fr_dis_descriptio {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #888;
+}
+#freelancer_display .fr_dis_container .fr_rate {
+  margin-bottom: 20px;
+}
+#freelancer_display .fr_dis_container .fr_rate p {
+  display: inline;
+  margin-left: 5px;
+}
+#freelancer_display .fr_dis_container .fr_rate span {
+  color: #888;
+}
+
+/********** Contratacao **********/
+#fr_contratacao {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+#fr_contratacao .cont_container {
+  width: 100% !important;
+  margin: 0 auto;
+}
+#fr_contratacao .cont_container .cont_card_container {
+  width: 100%;
+  margin: 0 auto;
+}
+#fr_contratacao .cont_container h2 {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  font: "Roboto", sans-serif;
+}
+#fr_contratacao .cont_container .cont_card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#fr_contratacao .cont_container .cont_card i {
+  color: blue;
+  font-size: 45px;
+}
+#fr_contratacao .cont_container .cont_card h4 {
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#fr_contratacao .cont_container .cont_card p {
+  font-size: 16px;
+  color: #777;
+}
+
+@media (min-width: 992px) {
+  .fr_dis_card {
+    background-color: #fff;
+    position: relative;
+    width: 310px;
+  }
+  .fr_dis_container {
+    width: 95% !important;
+  }
+  .cont_card_container {
+    width: 95% !important;
+  }
+  .cont_card_container .cont_card {
+    width: 310px;
+  }
+}
 /****** GENERAL SITTINGS START *******/
 * {
   margin: 0;
@@ -776,6 +905,8 @@ body {
 }
 
 /****** GENERAL SITTINGS END *******/
+/*************** FUNCTIONS START***********************/
+/*************** FUNCTIONS END***********************/
 /******** MEDIA QUIRY *********/
 @media (min-width: 600px) {
   .footer-body .ftr-calling-bt {
@@ -795,6 +926,9 @@ body {
   }
   .contratar_freelancers-swiper {
     width: 85%;
+  }
+  .freelance-menu .freelance-menu-container {
+    width: 300px !important;
   }
 }
 @media (min-width: 920px) {
@@ -864,7 +998,7 @@ body {
     margin-right: 10px;
     font-size: 16px;
   }
-  .nav-login:hover {
+  .nav-login1:hover {
     background-color: #111;
     border: none;
     padding: 5px;
@@ -912,13 +1046,14 @@ body {
     font-weight: bold;
     transition: 0.5s;
   }
+  /********** CATEGORIAS DO CURSO *************/
   .menu-cursos {
     position: relative;
   }
   .menu-cursos .menu-curso-container {
     position: absolute;
     margin-left: 0;
-    top: 45px;
+    top: 40px;
     background-color: white;
     z-index: 100;
     box-shadow: 1px 2px 10px #111;
@@ -927,8 +1062,83 @@ body {
   .menu-cursos .menu-curso-container ul li {
     font-size: 15px;
   }
+  .menu-cursos .menu-curso-container ul {
+    width: 200px;
+  }
   .menu-cursos:hover {
     margin-top: 0;
+  }
+  /*********** SUBCATEGORIA DO CURSO  ************/
+  .menu-cursos:hover > .menu-curso-container {
+    margin-top: 0;
+    display: flex !important;
+  }
+  .menu-cursos:hover > .menu-curso-container .ul li {
+    font-size: 15px;
+  }
+  .negocio:hover > .negocio-container,
+  .fin-cont:hover > .fin-cont-container,
+  .design:hover > .design-container,
+  .marketing:hover > .marketing-container,
+  .saud-fit:hover > .saud-fit-container {
+    display: flex;
+  }
+  .negocio:hover > .negocio-container ul,
+  .fin-cont:hover > .fin-cont-container ul,
+  .design:hover > .design-container ul,
+  .marketing:hover > .marketing-container ul,
+  .saud-fit:hover > .saud-fit-container ul {
+    width: 200px;
+  }
+  .saud-fit:hover > .saud-fit-container,
+  .ensino:hover > .ensino-container,
+  .desnvol-pes:hover > .desnvol-pes-container {
+    display: flex;
+  }
+  .saud-fit:hover > .saud-fit-container ul,
+  .ensino:hover > .ensino-container ul,
+  .desnvol-pes:hover > .desnvol-pes-container ul {
+    width: 140px;
+  }
+  .marketing:hover > .marketing-container {
+    display: flex;
+    top: -150px;
+  }
+  .marketing:hover > .marketing-container ul {
+    width: 200px;
+  }
+  /********* CATEGORIA DOS FREELANCERS************/
+  .freelance-menu {
+    position: relative;
+  }
+  .freelance-menu .freelance-menu-container {
+    position: absolute;
+    margin-left: 0;
+    top: 40px;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 1px 2px 10px #111;
+    width: 480px !important;
+  }
+  .freelance-menu .freelance-menu-container ul li {
+    font-size: 15px;
+  }
+  .freelance-menu .freelance-menu-container ul {
+    width: 300px;
+  }
+  .freelance-menu:hover > .freelance-menu-container {
+    margin-top: 0;
+    display: flex !important;
+  }
+  .freelance-menu:hover > .freelance-menu-container .ul li {
+    font-size: 15px;
+  }
+  .freelance-menu:hover {
+    margin-top: 0;
+  }
+  /************ PAGINA DE FREELANCERS ****************/
+  #fr_init_section {
+    margin-top: 6.5rem;
   }
   #banner {
     margin-top: 5rem;
@@ -1068,5 +1278,13 @@ body {
 @media (min-width: 1030px) {
   .footer-body .ftr-content {
     width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-body .ftr-content {
+    width: 60%;
+  }
+  .menu-cursos .menu-curso-container ul {
+    width: 198px !important;
   }
 }/*# sourceMappingURL=style.css.map */
