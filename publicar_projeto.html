@@ -26,7 +26,7 @@
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <title>Freelancer</title>
+    <title>Home</title>
 
 </head>
 
@@ -43,7 +43,7 @@
                     <a href="#"><i class="bi bi-whatsapp"></i></a>
                     <a href="#"> <i class="bi bi-instagram"></i></a>
                 </div>
-                <a href="#" class="nav-login1"><i class="bi bi-person-circle"></i>Login</a>
+                <a href="dashboard/index.html" class="nav-login1"><i class="bi bi-person-circle"></i>Login</a>
                 <a href="cadastro.html" class="nav-cadastrar1">Cadastrar-se</a>
             </div>
             <div class="container-fluid navbar-content ">
@@ -98,10 +98,11 @@
                         </li>
                         <!-- freelancers -->
                         <li class="nav-item freelance-menu">
-                            <a class="nav-link" href="#">Freelancers</a> 
+                            <a class="nav-link" href="#">Freelancers</a>
                             <div class="freelance-menu-container">
                                 <ul>
-                                    <li class="fr-designer"><a class="nav-link" href="freelancer.html">Freelancer</a></li>
+                                    <li class="fr-designer"><a class="nav-link" href="freelancer.html">Freelancer</a>
+                                    </li>
                                     <li class="fr-designer"><a class="nav-link" href="#">Design e Media</a></li>
                                     <li class="fr-finaca"><a class="nav-link" href="#">Finanças e Contabilidade</a></li>
                                     <li class="fr-beleza"><a class="nav-link" href="#">Beleza</a></li>
@@ -126,16 +127,13 @@
                     </ul>
                     <!-- Mobile Ligin and Register -->
                     <div class="login-reg">
-                        <a href="#" class="nav-login"> <i class="bi bi-person-circle"></i>Login</a>
+                        <a href="dashboard/index.html" class="nav-login"> <i class="bi bi-person-circle"></i>Login</a>
                         <a href="cadastro.html" class="nav-cadastrar">Cadastrar-se</a>
                     </div>
                     <div class="midia">
                         <a href="#"> <i class="bi bi-facebook"></i></a>
                         <a href="#"><i class="bi bi-whatsapp"></i></a>
                         <a href="#"><i class="bi bi-instagram"></i></a>
-
-
-
                     </div>
                     <!-- Search From -->
                     <form class="d-flex search-bar" role="search">
@@ -150,202 +148,62 @@
         <!-- NAVBAR END-->
     </header>
     <!-- HEADER END -->
-    <!-- MAIN START  -->
+
+    <!-- MAIN START -->
     <main>
-        <!-- ********* BUSCAS E FILTRAGENS DE FREELANCERS START ********* -->
-        <section id="fr_init_section">
-            <div class="fr_calling row">
-                <a href="publicar_projeto.html" class="btn btn-warning col-8 col-sm-4 col-md-3 container-fluid">Contratar Um Freelancer</a>
-                <a href="cadastro.html" class="btn btn-primary col-10 col-sm-7 col-md-5 container-fluid">Ganhe Dinheiro Trabalhando Como Freelancer</a>
-            </div>
-            <hr class="container">
-            <form class="container">
+        <div class="proj_pub_banner">
+            <h2>Publicar um Projeto</h2>
+            <span class="prob_pro_line"></span>
+            <ul>
+                <li><a href="freelancer.html">Freelancer</a></li>
+                <li><a href="publicar_projeto.html">Publicar Projeto</a></li>
+            </ul>
+        </div>
+        <div class="container project_pub_container">
+
+            <h2>Publique um Projeto</h2>
+
+            <form action="">
                 <div class="row">
-                    <div class="col-6 col-sm-4 col-lg-2">
-                        <select name="" id="" class="form-select ">
-                            <option value="1" selected>Selecionar Serviço</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                    <div class=" col-12 col-sm-10 col-md-6 container-fluid">
+                        <label for="">Escolha uma categoria <span>*</span></label>
+                        <select name="" id="" class="form-select" required>
+                            <option value="" selected>Selecione uma categoria</option>
+                            <option name="" id="">Categoria 1</option>
+                            <option name="" id="">Categoria 2</ooption>
+                            <option name="" id="">Categoria 3</optiion>
+                            <option name="" id="">Categoria 4</option>
+                            <option name="" id="">Categoria 5</option>
                         </select>
+    
+                        <label for="">Dê um Nome para o trabalho <span>*</span></label>
+                        <input type="text" class="form-control" placeholder="Ex: Redator para blog de tecnologia" required>
+    
+                        <label for="">Descreva o trabalho a ser feito <span>*</span></label>
+                        <textarea name="" id="" cols="30" rows="5" required class="form-control"></textarea>
                     </div>
-                    <div class="col-6 col-sm-4 col-lg-2">
-                        <select name="" id="" class="form-select">
-                            <option value="1" selected>Orçamento</option>
-                            <option value="2">Opcao 1</option>
-                            <option value="3">Opcao 2</option>
+                    <div class="col-12 col-sm-10 col-md-6 container-fluid">
+                        <label for="">Quais habilidades são desejadas? <span>*</span></label>
+                        <select name="" id="" class="form-control" multiple>
+                            <option value="">Habilidade 1</option>
+                            <option value="">Habilidade 2</option>
+                            <option value="">Habilidade 3</option>
+                            <option value="">Habilidade 4</option>
+                            <option value="">Habilidade 5</option>
                         </select>
-                    </div>
-                    <div class="col-6 col-sm-4 col-lg-2">
-                        <select name="" id="" class="form-select">
-                            <option value="1" selected>Praso de Entrega</option>
-                            <option value="2">Opcao 1</option>
-                            <option value="3">Opcao 2</option>
-                        </select>
-                    </div>
-                    <div class="col-10 col-sm-8 col-lg-5 col-xl-4 d-flex container-fluid fr_search">
-                        <input type="search" name="" id="" placeholder="Buscar freelancers" class="form-control">
-                        <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+    
+                        <label for="" class="pub_prazo">Prazo<span>*</span></label>
+                        <input type="datetime-local" class="form-control" required>
                     </div>
 
+                    <input type="submit" value="Publicar Projeto" class="btn btn-primary pub_button">
                 </div>
             </form>
-            <hr class="container">
-        </section>
-        <!-- ********* BUSCAS E FILTRAGENS DE FREELANCERS END ********* -->
 
-        <!-- ********* FREELANCERS START ********* -->
-        <section id="freelancer_display">
-            <!-- Container -->
-            <div class="fr_dis_container row">
-                <!-- Card start -->
-                <div class="fr_dis_card col-12 col-sm-5   container-fluid">
-                    <img src="img/Freelancer/cards/1.jpg" alt="">
-                    <!-- Heart -->
-                    <span class="fr_heart"><i class="bi bi-heart"></i></span>
-                    <div class="fr_dis_card_contente">
-                        <!-- freelancer name and image -->
-                        <div class="fr_dis_user">
-                            <img src="img/Freelancer/cards/user1.png" alt="">
-                            <h5>Freelancer Name</h5>
-                        </div>
-                        <!-- Litle description -->
-                        <div class="fr_dis_descriptio">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni exercitationem veniam omnis repellendus ab reiciendis?
-                        </div>
-                        <!-- rate -->
-                        <div class="fr_rate">
-                            <i class="bi bi-star-fill"></i><p>5.0 <span>(132)</span></p>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card end -->
-                <!-- Card start -->
-                <div class="fr_dis_card col-12 col-sm-5  container-fluid">
-                    <img src="img/Freelancer/cards/2.jpg" alt="">
-                    <!-- Heart -->
-                    <span class="fr_heart"><i class="bi bi-heart"></i></span>
-                    <div class="fr_dis_card_contente">
-                        <!-- freelancer name and image -->
-                        <div class="fr_dis_user">
-                            <img src="img/Freelancer/cards/user2.png" alt="">
-                            <h5>Freelancer Name</h5>
-                        </div>
-                        <!-- Litle description -->
-                        <div class="fr_dis_descriptio">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni exercitationem veniam omnis repellendus ab reiciendis?
-                        </div>
-                         <!-- rate -->
-                         <div class="fr_rate">
-                            <i class="bi bi-star-fill"></i><p>5.0 <span>(132)</span></p>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card end -->
-                <!-- Card start -->
-                <div class="fr_dis_card col-12 col-sm-5  container-fluid">
-                    <img src="img/Freelancer/cards/3.jpg" alt="">
-                    <!-- Heart -->
-                    <span class="fr_heart"><i class="bi bi-heart"></i></span>
-                    <div class="fr_dis_card_contente">
-                        <!-- freelancer name and image -->
-                        <div class="fr_dis_user">
-                            <img src="img/Freelancer/cards/user1.png" alt="">
-                            <h5>Freelancer Name</h5>
-                        </div>
-                        <!-- Litle description -->
-                        <div class="fr_dis_descriptio">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni exercitationem veniam omnis repellendus ab reiciendis?
-                        </div>
-                         <!-- rate -->
-                         <div class="fr_rate">
-                            <i class="bi bi-star-fill"></i><p>5.0 <span>(132)</span></p>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card end -->
-                <!-- Card start -->
-                <div class="fr_dis_card col-12 col-sm-5   container-fluid">
-                    <img src="img/Freelancer/cards/7.jpg" alt="">
-                    <!-- Heart -->
-                    <span class="fr_heart"><i class="bi bi-heart"></i></span>
-                    <div class="fr_dis_card_contente">
-                        <!-- freelancer name and image -->
-                        <div class="fr_dis_user">
-                            <img src="img/Freelancer/cards/user2.png" alt="">
-                            <h5>Freelancer Name</h5>
-                        </div>
-                        <!-- Litle description -->
-                        <div class="fr_dis_descriptio">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni exercitationem veniam omnis repellendus ab reiciendis?
-                        </div>
-                         <!-- rate -->
-                         <div class="fr_rate">
-                            <i class="bi bi-star-fill"></i><p>5.0 <span>(132)</span></p>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card end -->
-
-            </div>
-            <div class="fr_pagination_container ">
-                <ul class="fr_pagination ">
-                    <li><a href="#"><i class="bi bi-arrow-left"></i> </a></li>
-                    <li><a href="#" class="fr_active">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><i class="bi bi-arrow-right"></i></a></li>
-                </ul>
-            </div>
-        </section>
-        <!-- ********* FREELANCERS END ********* -->
-
-        <!-- COMO FUNCIONA A CONTRATACAO START -->
-        <section id="fr_contratacao">
-            <div class="cont_container">
-                <h2>Como funciona a contratação</h2>
-                <!-- Card container -->
-                <div class="cont_card_container row">
-                    <!-- Card start--> 
-                    <div class="cont_card col-10 col-sm-5 col-md-5 container-fluid">
-                        <i class="bi bi-pc-display-horizontal"></i>
-                        <h4>1. Publique um trabalho</h4>
-                        <p>Conte-nos em alguns segundos o que você precisa que seja feito. </p>
-                    </div>
-                    <!-- Card end-->
-                    <!-- Card start-->
-                    <div class="cont_card col-10 col-sm-5 col-md-5 container-fluid">
-                        <i class="bi bi-person-bounding-box"></i>
-                        <h4>2. Escolha freelancers</h4>
-                        <p>Receba sua primeira oferta dentro de segundos e escolha entre os melhores.</p>
-                    </div>
-                    <!-- Card end-->
-                    <!-- Card start-->
-                    <div class="cont_card col-10 col-sm-5 col-md-5 container-fluid">
-                        <i class="bi bi-card-checklist"></i>
-                        <h4>3. Registre o Progresso</h4>
-                        <p>Converse com o seu freelancer e avalie seu trabalho a qualquer hora, em qualquer dia da semana.</p>
-                    </div>
-                    <!-- Card end-->
-                    <!-- Card start-->
-                    <div class="cont_card col-10 col-sm-5 col-md-5 container-fluid">
-                        <i class="bi bi-currency-dollar"></i>
-                        <h4>4. Pague com segurança</h4>
-                        <p>Pague apenas quande estiver totalmente satisfeito(a).</p>
-                    </div>
-                    <!-- Card end-->
-                </div>
-            </div>
-        </section>
-        <!-- COMO FUNCIONA A CONTRATACAO END -->
-
+        </div>
     </main>
     <!-- MAIN END -->
+
     <!-- FOOTER START -->
     <footer>
         <div class="footer-body">
@@ -426,6 +284,11 @@
         </div>
     </footer>
     <!-- FOOTER END -->
+
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS APP -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
