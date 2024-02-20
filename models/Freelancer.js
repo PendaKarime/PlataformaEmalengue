@@ -1,28 +1,25 @@
 /**IMPORTS CONFIG ========================================================= */
 //DB connection
 const db = require('./db')
+const User = require('./User')
+
 
 const Freelancer = db.sequelize.define('freelancers', {
     id:{
-        type: db.Sequelize.INTEGER,
+        type: db.Sequelize.INTEGER, 
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true 
     },
-    name: {
-        type: db.Sequelize.STRING,
-        allowNull: false,
-    }, 
-    email:{
-        type: db.Sequelize.STRING,
-        unique:true,
+    phone: {
+        type:db.Sequelize.STRING,
+        
     },
-    senha:{
-        type: db.Sequelize.STRING,
-        // unique:true
+    especialidade: {
+        type:db.Sequelize.STRING,
     },
     pais:{
-        type: db.Sequelize.STRING
-    },
+        type: db.Sequelize.STRING 
+    }, 
     provincia:{
         type: db.Sequelize.STRING
     },
@@ -30,7 +27,7 @@ const Freelancer = db.sequelize.define('freelancers', {
         type: db.Sequelize.TEXT,
     },
     certificacoes:{ 
-        type: db.Sequelize.TEXT
+        type: db.Sequelize.TEXT 
     },
     sobre:{
         type: db.Sequelize.TEXT
@@ -43,11 +40,20 @@ const Freelancer = db.sequelize.define('freelancers', {
     },
     imagem: {
         type: db.Sequelize.STRING
-    }
+    },
+    // userId:{
+    //     type: db.Sequelize.INTEGER,
+    //     references:{
+    //         model: 'users',
+    //         key: 'id',
+    //     }
+    // }
 
 })
 
+
+
 //Sync data in DB
-// Freelancer.sync({force:true})
+// Freelancer.sync()
 
 module.exports = Freelancer

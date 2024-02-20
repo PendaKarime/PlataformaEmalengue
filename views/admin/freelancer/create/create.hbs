@@ -8,27 +8,35 @@
             <!-- <a href="index.html" class="logo">eMaLENGUE</a> -->
             <h2>Cadastra freelancer</h2>
             <!-- Form start -->
-            <form action="/dashboard/freelancer/enviar_cadastro", method="post" enctype="multipart/form-data">
+            <form enctype="multipart/form-data" id="new_freelancer_form">
                 <div class="row">
                     <!-- update profile photo -->
-                    <div class="col-10  fr_rg_photo container-fluid">
-                        <img src="/admin/img/profile.jpg" alt="" id="fr_rg_photo_img">
-                        <input type="file" class="form-control" id="fr_rg_photo_input" name="img">
+                    <div class="col-10  fr_rg_photo container-fluid"> 
+                        <img src="/admin/img/profile.jpg" alt="" id="fr_rg_photo_img" >
+                        <input type="file" class="form-control" id="fr_rg_photo_input" name="img" required>
                     </div>
+
+                    <!-- Checkbox -->
+                    <div class="col-10  container-fluid" style="background-color:;">
+                        <span >Já sou um usuário</sp> <input type="checkbox" id="fr_checkbox">
+                    </div>
+
                     <!-- Personal Information -->
                     <div class="col-10 col-md-5 fr_rg_personalData container-fluid">
                         <!-- Name -->
-                        <label for="name">Nome <span>*</span></label>
-                        <input type="text" placeholder="Seu nome..." class="form-control" name="name" >
+                        <label for="name" id="label_name">Nome <span>*</span></label>
+                        <input type="text" placeholder="Seu nome..." class="form-control" name="name" required>
                         <!-- Email -->
                         <label for="email">Email <span>*</span></label>
-                        <input type="text" placeholder="...@gmail.com" class="form-control" name="email" >
+                        <input type="text" placeholder="...@gmail.com" class="form-control" name="email" required>
+                        <div id="emailMessage">lorem ksndiospgioarhp ghuiagp uiguirp tgaruip grha tgruaptuiag rghpriau grgio</div>
+
                         <!-- Password -->
-                        <label for="password">Senha <span>*</span></label>
-                        <input type="password" placeholder="" class="form-control" name="password" >
+                        <label for="password" id="label_pw">Senha <span>*</span></label>
+                        <input type="password" placeholder="" class="form-control" name="password" required>
                         <!-- Country -->
                         <label for="country">Pais <span>*</span></label>
-                        <select name="country" id="" class="form-select" >
+                        <select name="country" id="fr_seletor" class="form-select" required>
                             <option value="Angola" selected>Angola</option>
                             <option value="Amerca">Amerca</option>
                             <option value="Argentina">Argentina</option>
@@ -36,36 +44,44 @@
                             <option value="Canada">Canada</option>
                         </select>
 
+                        <!-- Telefone -->
+                        <label for="province">Telefone <span>*</span></label>
+                        <input type="tel" placeholder="Provincia" class="form-control" name="phone" required>
+
                         <!-- Province -->
                         <label for="province">Provincia <span>*</span></label>
-                        <input type="text" placeholder="Provincia" class="form-control" name="province" > 
+                        <input type="text" placeholder="Provincia" class="form-control" name="province" required>
                     </div>
 
                     <!-- Proffssional Information -->
                     <div class="col-10 col-md-5 fr_rg_professionalData container-fluid">
 
+                        <!-- Especialidade -->
+                        <label for="skills">Sua Especialidade <span>*</span></label>
+                        <input type="text" placeholder="Designer" class="form-control" name="especialidade" required>
+
                         <!-- Habiliteis -->
                         <label for="skills">Principais Habilidades <span>*</span></label>
-                        <input type="text" placeholder="HTML, JS, CSS..." class="form-control" name="skills" >
+                        <input type="text" placeholder="HTML, JS, CSS..." class="form-control" name="skills" required>
 
                         <!-- Cetification -->
                         <label for="certification">Certificações <span>*</span></label>
-                        <input type="text" placeholder="Certificações" class="form-control" name="certification" >
+                        <input type="text" placeholder="Certificações" class="form-control" name="certification" required>
 
                         <!-- About User -->
                         <label for="about">Sobre mim <span>*</span></label>
-                        <textarea name="about" id="" cols="30" rows="7" placeholder="Escreva sobre você..."
-                            class="form-control" ></textarea>
+                        <textarea name="about" id="fr_aboutMi" cols="30" rows="7" placeholder="Escreva sobre você..."
+                            class="form-control" required></textarea>
                     </div>
 
                     <!-- update Docs -->
                     <div class="col-10 col-md-5 container-fluid">
                         <label for="identification">Anexar Bilhete de Identidade <span>*</span></label>
-                        <input type="file" placeholder="" name="identification" class="form-control" >
+                        <input type="file" placeholder="" name="identification" class="form-control" required>
                     </div>
                     <div class="col-10 col-md-5 fr_rg_doc container-fluid">
                         <label for="cv">Anexar CV <span>*</span></label>
-                        <input type="file" name="cv" class="form-control" >
+                        <input type="file" name="cv" class="form-control" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
@@ -76,4 +92,63 @@
     </div>
 </main>
 <!-- MAIN END -->
+
+{{!-- SCRIPPT --}}
+<script>
+    const form = document.getElementById('new_freelancer_form')
+    const emailMessage = document.getElementById('emailMessage')
+    const fr_checkbox = document.getElementById('fr_checkbox')
+    const label_name = document.getElementById('label_name')
+    const label_pw = document.getElementById('label_pw')
+    //emailMessage.style.display = 'none'
+
+    fr_checkbox.addEventListener('click', () => {
+        const name = form.name
+        const email = form.email
+        const password = form.password
+        emailMessage.innerHTML = ""
+        emailMessage.style.display = "none"
+
+        if(fr_checkbox.checked == true){
+            name.setAttribute('type', 'hidden')              
+            password.setAttribute('type', 'hidden')
+            label_name.style.display = "none"
+            label_pw.style.display = "none"   
+        } else{
+            name.setAttribute('type', 'text')               
+            password.setAttribute('type', 'password')  
+            label_name.style.display = "block"
+            label_pw.style.display = "block"        
+        }
+    })
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault()
+
+        const formData = new FormData(form)
+        try {
+            const response = await fetch('/dashboard/freelancer/enviar_cadastro', {
+                method: 'POST',
+                body: formData
+            })
+            const result = await response.json()
+
+            //Handle With Existent User Massage
+            if(result.code == 1) {
+                console.log(result.desc)
+                emailMessage.innerHTML = result.desc
+            }
+            
+
+            if(result.fr){
+                location.assign('/dashboard/freelancer') 
+            }
+        } catch (err) {
+            console.log("Ocorreu um erro com o Fetch(): " + err)
+        }
+
+    })
+    
+</script>
+
 {{> dashFooter }}
