@@ -1,12 +1,12 @@
 <!-- SIDEBAR START -->
 <div id="sidebar">
     <nav>
-        <ul>
+        <ul id="sdb_container"> 
             <li id="sdb-slide"><i class="bi bi-arrow-right" id="slide-icon"></i></li>
         </ul>
 
         <h3 class="sd-title">Painel de Controlo</h3>
-        <ul>
+        <ul class="home">
             <li>
                 <a href="/dashboard"><i class="bi bi-house-fill"></i>
                     <span class="sb-content">Home</span>
@@ -14,37 +14,40 @@
             </li>
         </ul>
 
-        <h3 class="sd-title">Freelancer</h3>
 
+        {{#ifIqual user.role "admin" }}
+            <h3 class="sd-title">Freelancer</h3>
+            <ul>
+                <li> 
+                    <a href="/dashboard/freelancer"><i class="bi bi-person-fill"></i>
+                        <span class="sb-content">Freelancers</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/dashboard/freelancer/cadastrar"><i class="bi bi-person-fill-add"></i>
+                        <span class="sb-content">Cadastrar Freelancer</span>
+                    </a>
+                </li>
+            </ul>
+        {{/ifIqual }}
+
+        {{!-- {{#ifIqual user.role "freelancer" }}
+            <h3 class="sd-title">Freelancer</h3>
+            <ul>
+                <li>
+                    <a href="/dashboard/freelancer"><i class="bi bi-person-fill"></i>
+                        <span class="sb-content">Freelancers</span>
+                    </a>
+
+                </li>
+            </ul>
+        {{/ifIqual }} --}}
+        <!-- CURSOS ===========================================================  -->
+        <h3 class="sd-title">Cursos</h3>
         <ul>
-            {{#ifIqual user.role "admin" }}
             <li>
-                <a href="/dashboard/freelancer"><i class="bi bi-person-fill"></i>
-                    <span class="sb-content">Freelancers</span>
-                </a>
-
-            </li>
-            <li>
-                <a href="/dashboard/freelancer/cadastrar"><i class="bi bi-person-fill-add"></i>
-                    <span class="sb-content">Cadastrar Freelancer</span>
-                </a>
-            </li>
-            {{/ifIqual }}
-
-            {{#ifIqual user.role "freelancer" }}
-            <li>
-                <a href="/dashboard/freelancer"><i class="bi bi-person-fill"></i>
-                    <span class="sb-content">Freelancers</span>
-                </a>
-
-            </li>
-            {{/ifIqual }}
-        </ul>
-
-        <h3 class="sd-title">Curso</h3>
-        <ul>
-            <li>
-                <a href="#"><i class="bi bi-grid-fill"></i>
+                <a href="/dashboard/cursos"><i class="bi bi-grid-fill"></i>
                     <span class="sb-content">Cursos</span>
                 </a>
             </li>
@@ -54,10 +57,17 @@
                 </a>
             </li>
         </ul>
+        <!-- PROJETOS ===========================================================  -->
+        <h3 class="sd-title">Projetos</h3>
         <ul>
             <li>
-                <a href="#"><i class="bi bi-building-fill"></i>
-                    <span class="sb-content">Projetos</span>
+                <a href="/dashboard/projeto/meuprojeto"><i class="bi bi-kanban"></i></i>
+                    <span class="sb-content">Meus Projetos</span>
+                </a>
+            </li>
+            <li>
+                <a href="/dashboard/projeto"><i class="bi bi-kanban"></i>
+                    <span class="sb-content">Projetos Publicados</span>
                 </a>
             </li>
             <li>
@@ -65,6 +75,16 @@
                     <span class="sb-content">Publicar Projeto</span>
                 </a>
             </li>
+        </ul>
+        <!-- PPERFIL ===========================================================  -->
+        <h3 class="sd-title">Perfil</h3>
+        <ul>
+            <li>
+                <a href="/dashboard/user/profile/{{ user.id }}"><i class="bi bi-person-fill"></i>
+                    <span class="sb-content"> {{ user.nome }} </span>
+                </a>
+            </li>
+            
         </ul>
     </nav>
 </div>

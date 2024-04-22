@@ -3,6 +3,14 @@
 <!-- MAIN START -->
 <main>
     <div class="container">
+        <div class="nw_pr_breadcrumbs">
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="/dashboard">Home</a></li>
+                    <li><a href="/dashboard/projeto">Meus projetos</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="nw_pr_container">
             <h2>Publicar Projeto</h2>
             <form id="admin_projeto_form" enctype="multipart/form-data">
@@ -18,11 +26,10 @@
 
                         <label for="categoria">Escolha uma categoria <span>*</span></label>
                         <select name="categoria" id="" class="form-select" required>
-                            <option value="" selected>Selecionar uma categoria</option>
-                            <option value="1">categoria 1</option>
-                            <option value="2">categoria 2</option>
-                            <option value="3">categoria 3</option>
-                            <option value="4">categoria 4</option>
+                            <option  selected>Selecionar uma categoria</option>
+                             {{#each categoria}}
+                                <option value="{{ id }}"> {{ name }} </option>
+                             {{/each}}
                         </select>
                     </div>
                     <!-- Project Name -->
@@ -40,21 +47,18 @@
                     <div class="col-10 col-md-5 container-fluid">
                         <label for="habilidades">Quais habilidades são desejadas? <span>*</span></label>
                         <select name="habilidades" id="" class="form-select" multiple required>
-                            <option value="1">habilidade 1</option>
-                            <option value="2">habilidade 2</option>
-                            <option value="3">habilidade 3</option>
-                            <option value="4">habilidade 4</option>
-                            <option value="5">habilidade 5</option>
-                            <option value="6">habilidade 6</option>
+                            {{#each habilidade }}
+                                <option value="{{ id }}"> {{ name }} </option>
+                            {{/each }}
                         </select>
-                        <span >Selecionar no máximo 5</span>
+                        <span >Selecionar no máximo 5 (ctrl + click) </span>
                     </div>
                     <!-- Project Duration -->
                     <div class="col-10 col-md-5 container-fluid">
                         <label for="prazo">Prazo <span>*</span></label>
                         <input type="date" name="prazo" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-success">Publicar</button>
+                    <button type="submit" class="btn btn-primary">Publicar</button>
                 </div>
             </form>
         </div>
@@ -70,7 +74,6 @@
             e.preventDefault()
 
             const formData = new FormData(form)
-            const url = '/dashboard/projeto/criar' 
            
             try{
                 const response = await fetch('/dashboard/projeto/criar', {
@@ -82,7 +85,7 @@
                 console.log(result)
                 if(result.project) {
                     console.log(result)
-                    location.assign('/dashboard')
+                    location.assign('/dashboard/projeto')
                 }
 
             } catch (err) {

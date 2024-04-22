@@ -2,13 +2,15 @@
     margin-top: 5rem;
     margin-bottom: 5rem;
     padding-bottom: 2.5rem;
+    overflow-y: hidden;
+    transition: ease-in-out .5s;
 
     h2 {
         text-align: center;
         border-bottom: 1px solid #ddd;
         padding-bottom: 10px;
         padding-top: 2rem;
-        width: 200px;
+        width: 300px;
         margin: 0 auto;
         margin-bottom: 3rem;
     }
@@ -52,6 +54,12 @@
         margin-bottom: 2rem;
     }
 
+    .fr_rg_photo {
+        border:  dashed 1px #888;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
     .fr_rg_photo img {
         width: 100px;
         height: 100px;
@@ -63,6 +71,12 @@
     }
 
 
+}
+
+#emailMessage{
+    background: rgba(243, 90, 90, 0.564); 
+    padding: 10px;
+    border-radius: 5px;
 }
 
 @media(min-width:720px) {

@@ -1,7 +1,9 @@
 /**IMPORTS ============================================ */
+// const Projeto = require('../routes/admin/projetoRoute')
+
 const db = require('./db')
 
-const Projeto =  db.sequelize.define('projetos', {
+const Projeto = db.sequelize.define('projetos', {
     id: {
         type: db.Sequelize.INTEGER,
         autoIncrement: true,
@@ -11,31 +13,36 @@ const Projeto =  db.sequelize.define('projetos', {
         type: db.Sequelize.STRING,
         allowNull: false,
     },
-    image: { 
+    image: {
         type: db.Sequelize.STRING,
     },
-    descricao: { 
+    descricao: {
         type: db.Sequelize.TEXT,
     },
     prazo: {
         type: db.Sequelize.DATEONLY,
     },
-    categoria: {
+    
+    user_id: {
         type: db.Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id',
+        }
     },
-    habilidade: {
+    categoria_Id: {
         type: db.Sequelize.INTEGER,
-    }, 
-    // user_id: {
-    //     type: db.Sequelize.INTEGER,
-    //     references: {
-    //       model: 'users',
-    //       key: 'id',
-    //     }
-    //   },
+        references: {
+          model: 'categorias',
+          key: 'id',
+        }
+    }
+
 })
 
 
+ 
+Projeto.sync()
 
-/**EXPORTS ============================================ */
+/**EXPORTS ============================================ */ 
 module.exports = Projeto
