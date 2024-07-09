@@ -43,7 +43,7 @@ footer {
 }
 
 /***** GENERAL CONFIG END *****/
-/***** IMPORTING FILE START *****/
+/* ======================**** IMPORTING FILE START =============================*****/
 .header-container {
   display: flex !important;
   justify-content: space-between;
@@ -57,7 +57,8 @@ footer {
 }
 .hd-container #user-menu img {
   z-index: 100;
-  width: 35px;
+  width: 28px;
+  height: 28px;
   border-radius: 100px;
 }
 
@@ -84,7 +85,8 @@ footer {
 #dash_dropdown a {
   text-decoration: none;
   color: #555;
-  font-size: 17px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
   padding: 2px;
 }
 #dash_dropdown a i {
@@ -217,7 +219,8 @@ footer {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   padding-bottom: 0;
 }
 
@@ -267,7 +270,8 @@ footer {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
 }
 .fr_container table .fr_name {
   font-size: 15px;
@@ -302,11 +306,13 @@ footer {
   color: rgb(0, 60, 255);
 }
 .fr_container table .fr_delete {
+  margin-left: 10px;
   background-color: rgba(255, 0, 0, 0.233);
   color: red;
   border: none;
 }
 .fr_container table .fr_view {
+  margin-left: 10px;
   background-color: rgba(0, 128, 0, 0.301);
   color: green;
   border: none;
@@ -430,7 +436,8 @@ footer {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   padding-bottom: 0;
 }
 
@@ -440,7 +447,8 @@ footer {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   font-family: "Roboto", sans-serif;
 }
 .pj_container .pj_search {
@@ -551,7 +559,8 @@ footer {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   padding: 6px;
   padding-top: 0.5rem;
   display: flex;
@@ -573,7 +582,8 @@ footer {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   padding: 10px;
   font-family: "Roboto", sans-serif;
 }
@@ -680,7 +690,8 @@ footer {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   padding-bottom: 0;
 }
 
@@ -690,7 +701,8 @@ footer {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   padding: 20px;
   font-family: "Roboto", sans-serif;
   background: #eee !important;
@@ -916,7 +928,6 @@ tr {
 
 .breadcrumbs {
   font-family: "Roboto", sans-serif;
-  padding: 10px;
 }
 .breadcrumbs ul {
   margin: 0;
@@ -1236,28 +1247,6 @@ tr {
   outline: none;
 }
 
-#AlertMessage {
-  width: auto;
-  background: rgba(2, 110, 2, 0.822);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  position: fixed;
-  top: 4rem;
-}
-#AlertMessage p {
-  padding: 0;
-  margin-left: 10px;
-  margin-bottom: 0;
-  padding-right: 15px;
-  color: rgb(124, 252, 124);
-}
-#AlertMessage img {
-  width: 50px;
-  height: 50px;
-}
-
 #emailerror {
   background: rgba(255, 0, 0, 0.315);
   padding: 10px;
@@ -1286,7 +1275,8 @@ tr {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   padding-bottom: 0;
 }
 
@@ -1296,7 +1286,8 @@ tr {
   margin-bottom: 1.5rem;
   border-radius: 4px;
   box-shadow: 1px 2px 5px #ddd;
-  padding-bottom: 1.5rem;
+  padding: 10px;
+  font-size: 15px;
   padding: 10px;
   position: relative;
 }
@@ -1607,6 +1598,1322 @@ tr {
 
 .edit_conf_email {
   margin-top: 0px !important;
+}
+
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.users_breadcrumbs {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+  padding-bottom: 0;
+}
+
+.users_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+  overflow-x: auto;
+}
+.users_container table .us_name {
+  font-size: 15px;
+  margin: 0;
+  color: #222;
+  font-family: "Roboto", sans-serif;
+}
+.users_container table .us_profissao {
+  font-size: 13px;
+  color: #888;
+}
+.users_container table .us_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.users_container table .us_skills {
+  font-size: 13px;
+  color: #888;
+}
+.users_container table .us_email {
+  font-size: 14px;
+  color: #888;
+}
+.users_container table .us_id {
+  font-size: 16px;
+  color: #888;
+  display: block;
+}
+.users_container table .us_delete {
+  background-color: rgba(255, 0, 0, 0.233);
+  color: red;
+  border: none;
+}
+.users_container table .us_view {
+  margin-left: 10px;
+  background-color: rgba(2, 119, 228, 0.322);
+  color: rgb(0, 60, 255);
+  border: none;
+}
+.users_container table .us_edit,
+.users_container table .us_delete,
+.users_container table .us_view {
+  padding: 4px;
+  border-radius: 4px;
+}
+.users_container .status {
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+.users_container .status span {
+  background-color: rgba(0, 128, 0, 0.301);
+  color: green;
+  margin-left: 10px;
+  padding: 10px;
+}
+.users_container #role {
+  padding: 8px;
+  font-size: 17px;
+  width: 200px;
+  outline: none;
+  border-radius: 5px;
+}
+.users_container input[type=submit] {
+  display: block;
+  background-color: rgb(0, 89, 255);
+  color: #eee;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+}
+
+.us_delete_alert {
+  background: rgb(231, 146, 146);
+  border-radius: 10px;
+}
+
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.statistic_cards {
+  margin-top: 2rem;
+}
+
+.home_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.disp_flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px !important;
+  box-shadow: 1px 5px 10px #aaa;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  color: #777;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.free_card {
+  border-left: solid 8px rgb(42, 186, 243);
+}
+.free_card span {
+  display: block;
+}
+.free_card .fr_count {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(5, 121, 199);
+}
+.free_card .fr_hit {
+  color: #888;
+}
+.free_card .fr_icon {
+  background: linear-gradient(90deg, rgb(42, 186, 243), rgb(1, 144, 240), rgb(1, 75, 187));
+  text-align: center;
+}
+.free_card .fr_icon i {
+  font-size: 40px;
+  color: #eee;
+}
+
+.curso_card {
+  border-left: solid 8px rgb(250, 162, 0);
+}
+.curso_card span {
+  display: block;
+}
+.curso_card .cr_count {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(250, 162, 0);
+}
+.curso_card .cr_hit {
+  color: #888;
+}
+.curso_card .cr_icon {
+  background: linear-gradient(45deg, orange, rgb(250, 162, 0), rgb(255, 116, 2));
+  text-align: center;
+}
+.curso_card .cr_icon i {
+  font-size: 40px;
+  color: #eee;
+}
+
+.proj_card {
+  border-left: solid 8px rgb(1, 192, 1);
+}
+.proj_card span {
+  display: block;
+}
+.proj_card .pr_count {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(1, 192, 1);
+}
+.proj_card .pr_hit {
+  color: #888;
+}
+.proj_card .pr_icon {
+  background: linear-gradient(rgb(5, 223, 5), rgb(1, 192, 1), rgb(0, 112, 0));
+  text-align: center;
+}
+.proj_card .pr_icon i {
+  font-size: 40px;
+  color: #eee;
+}
+
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.crowd_breadcrumbs {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+  padding-bottom: 0;
+}
+
+.crowd_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.crowd_container h2 {
+  border-left: 3px solid #f7aa00;
+  padding-left: 10px;
+  font-size: 23px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.crowd_container label {
+  display: block;
+  color: hsl(0, 0%, 27%);
+}
+.crowd_container label span {
+  color: red;
+  margin-left: 3px;
+}
+.crowd_container form input {
+  width: 100%;
+  padding: 5px;
+  color: #444;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #888;
+  padding-left: 10px;
+}
+.crowd_container form textarea {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #444;
+}
+.crowd_container form #submit_btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.crf_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+  padding: 15px;
+  padding-top: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+.crf_container h2 {
+  border-left: 5px solid #f7aa00;
+  font-weight: bold;
+  font-size: 23px;
+  padding-left: 10px;
+}
+
+.crowd_cart {
+  padding: 0;
+  border: solid 1px #ccc;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+.crowd_cart figure {
+  width: 100%;
+  position: relative;
+}
+.crowd_cart figure img {
+  width: 100%;
+  height: 200px;
+}
+.crowd_cart figure figcaption {
+  background: #eee;
+  width: 140px;
+  padding: 2px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ccc;
+  color: #777;
+  position: absolute;
+  bottom: -15px;
+  left: 15px;
+}
+.crowd_cart .content {
+  padding: 12px;
+}
+.crowd_cart .content h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 0.4rem;
+  margin-bottom: 3px;
+  color: #222;
+}
+.crowd_cart .content span {
+  font-size: 14px;
+  color: #777;
+}
+.crowd_cart .content p {
+  font-size: 16px;
+  color: #777;
+  margin-top: 1rem;
+}
+.crowd_cart .detail {
+  padding: 15px;
+}
+.crowd_cart .detail .progress-bar {
+  background-color: rgb(3, 167, 3);
+}
+.crowd_cart .detail .progress {
+  height: 10px;
+}
+.crowd_cart .detail ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 5px;
+}
+.crowd_cart .detail ul li {
+  font-size: 14px;
+  color: #555;
+}
+.crowd_cart .detail ul li span {
+  color: #777;
+  display: block;
+}
+.crowd_cart .detail ul .first {
+  width: 20%;
+}
+.crowd_cart .detail ul .second {
+  text-align: center;
+  width: 50%;
+}
+.crowd_cart .detail ul .third {
+  text-align: end;
+  width: 30%;
+}
+.crowd_cart .local {
+  background-color: #ddd;
+  padding: 5px;
+}
+.crowd_cart .local span {
+  display: block;
+  color: #777;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .crowd_cart {
+    width: 30%;
+    margin-bottom: 2rem !important;
+  }
+}
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.crf_details {
+  font-size: 15px;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+.crf_details .crf_details_contente .crf_video {
+  box-shadow: 1px 5px 10px #aaa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+.crf_details .crf_details_contente iframe {
+  width: 100%;
+}
+.crf_details .crf_details_contente .dt_description h3 {
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+}
+.crf_details .crf_details_contente .dt_description p {
+  color: #777;
+}
+.crf_details .more_detail {
+  box-shadow: 1px 5px 10px #aaa;
+  padding: 10px;
+  border-radius: 5px;
+  padding-top: 1rem;
+  font-size: 15px;
+}
+.crf_details .more_detail h3 {
+  border-left: 3px solid #f7aa00;
+  padding-left: 10px;
+  margin-bottom: 2rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+.crf_details .more_detail ul {
+  list-style: none;
+  padding: 0;
+}
+.crf_details .more_detail .crf_avaluetion span {
+  display: block;
+  color: rgb(182, 121, 8);
+}
+.crf_details .more_detail .crf_avaluetion .crf_state {
+  background: rgb(3, 194, 3);
+  padding: 7px;
+  color: #eee;
+  border-radius: 4px;
+}
+.crf_details .more_detail .crf_avaluetion .crf_icon {
+  display: inline;
+  background: linear-gradient(rgb(10, 108, 255), rgb(8, 8, 216), rgb(1, 1, 160));
+  padding: 10px;
+  border-radius: 100%;
+  margin-right: 6px;
+}
+.crf_details .more_detail .crf_avaluetion i {
+  color: #fff;
+}
+.crf_details .more_detail .crf_avaluetion li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: dashed 1px #888;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+.crf_details .more_detail .crf_action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  font-size: 15px;
+}
+.crf_details .more_detail .crf_action button {
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+.crf_details .more_detail .crf_action i {
+  margin-right: 2px;
+}
+.crf_details .more_detail .crf_action .crf_delete {
+  background-color: rgb(255, 0, 34);
+  color: #fff;
+}
+.crf_details .more_detail .crf_action .crf_disable {
+  background-color: rgb(255, 136, 0);
+  color: #fff;
+}
+.crf_details .more_detail .crf_action a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12.5px;
+  background: rgb(0, 132, 255);
+  border: none;
+  border-radius: 4px;
+}
+
+.crf_dtails_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+  padding-top: 2rem;
+}
+.crf_dtails_container .scroll_area {
+  overflow-x: auto;
+}
+.crf_dtails_container table .crf_name {
+  font-size: 15px;
+  margin: 0;
+  color: #222;
+  font-family: "Roboto", sans-serif;
+}
+.crf_dtails_container table .crf_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.crf_dtails_container table .tr_helper {
+  display: flex;
+  align-items: center;
+}
+.crf_dtails_container table .tr_helper h5 {
+  margin-left: 10px;
+  color: #777;
+  font-size: 16px;
+}
+.crf_dtails_container table .crf_valor {
+  font-size: 16px;
+  font-weight: bold;
+}
+.crf_dtails_container table .dataHora {
+  font-size: 16px;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.crf_dtails_container table .dataHora span {
+  display: block;
+}
+.crf_dtails_container table .tr_state {
+  padding: 8px;
+  background: rgb(255, 166, 0);
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+}
+.crf_dtails_container table .tr_comp,
+.crf_dtails_container table .tr_more {
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+}
+.crf_dtails_container table .tr_comp {
+  background: rgb(0, 132, 255);
+  text-decoration: none;
+}
+.crf_dtails_container table .tr_more {
+  background: rgb(0, 4, 255);
+}
+
+.crf_delete_alert {
+  background-color: rgb(248, 135, 135);
+  border-radius: 5px;
+}
+
+.tr_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tr_flex form {
+  margin-right: 10px;
+}
+
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+#AlertMessage {
+  width: auto;
+  background: rgba(2, 110, 2, 0.822);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: fixed;
+  top: 4rem;
+  border: green solid 1px;
+}
+#AlertMessage p {
+  padding: 0;
+  margin-left: 10px;
+  margin-bottom: 0;
+  padding-right: 15px;
+  color: #eee;
+  font-size: 15px;
+}
+#AlertMessage img {
+  width: 50px;
+  height: 50px;
+}
+
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.curso_breadcrumbs {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.newCourse_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+  padding: 20px;
+  font-size: 15px;
+  color: #555;
+}
+.newCourse_container h2 {
+  font-size: 23px;
+  margin-bottom: 2rem;
+  margin-left: 30px;
+  font-weight: bold;
+  margin-top: 1.3rem;
+  border-left: 5px solid rgb(255, 145, 0);
+  padding-left: 10px;
+}
+.newCourse_container form div {
+  margin-bottom: 15px;
+}
+.newCourse_container form p {
+  margin: 0;
+  font-size: 14px;
+}
+.newCourse_container form label {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  margin-bottom: 3px;
+}
+.newCourse_container form span {
+  color: red;
+}
+.newCourse_container form input {
+  width: 100%;
+  color: #444;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  background-color: #eee;
+  padding: 5px;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 2px solid rgb(255, 145, 0);
+  outline: none;
+}
+.newCourse_container form input[type=file] {
+  padding: 20px;
+  border: 2px dashed rgb(255, 145, 0);
+  border-radius: 10px;
+}
+.newCourse_container form select {
+  width: 100%;
+  color: #444;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  background-color: #eee;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid rgb(255, 145, 0);
+  outline: none;
+}
+.newCourse_container form select option {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.newCourse_container form textarea {
+  width: 100%;
+  margin: 0 auto;
+  color: #555;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+.newCourse_container form #moduleAdd {
+  margin-top: 10px;
+}
+.newCourse_container form #moduleAdd button {
+  padding: 5px;
+  color: rgb(255, 145, 0);
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  float: right;
+  margin-right: 20px;
+}
+.newCourse_container form #moduleAdd button i {
+  font-size: 15px;
+  margin-right: 5px;
+}
+.newCourse_container form #moduleAdd #moduleDelete {
+  display: none;
+}
+.newCourse_container form button[type=submit] {
+  font-size: 15px;
+  background-color: rgb(0, 47, 255);
+  color: #eee;
+  padding: 7px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 60%;
+  margin: 2rem auto;
+}
+.newCourse_container form #moduleContainer h5 {
+  font-size: 18px;
+  margin-left: 30px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.curso_breadcrumbs {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.allCourse_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+}
+.allCourse_container .allCourse_bar {
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px #ddd;
+  font-size: 14px;
+}
+.allCourse_container .allCourse_bar .dropdown-menu {
+  height: 300px;
+  overflow-y: auto;
+}
+.allCourse_container .allCourse_bar .dropdown-menu li {
+  margin-bottom: 6px !important;
+  padding: 0;
+}
+.allCourse_container .allCourse_bar .dropdown-menu::-webkit-scrollbar {
+  width: 4px;
+}
+.allCourse_container .allCourse_bar .dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgb(5, 91, 250);
+  border-radius: 10px;
+}
+.allCourse_container .allCourse_bar .new_btn_c {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+.allCourse_container .allCourse_bar .bar_box {
+  list-style: none;
+  padding: 0 10px;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.allCourse_container .allCourse_bar .bar_box li {
+  margin-right: 10px;
+  margin-bottom: 1rem;
+}
+.allCourse_container .allCourse_bar .bar_box li:last-child {
+  margin-right: 0px;
+}
+.allCourse_container .allCourse_bar #all_c_btn {
+  padding: 10px;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  background-color: #ddd;
+}
+.allCourse_container .allCourse_bar .dropdown_category {
+  background: #eee;
+  color: #333;
+  font-size: 14px;
+  padding: 8px;
+  font-family: "Roboto", sans-serif;
+}
+.allCourse_container .allCourse_bar .dropdown_category:focus {
+  border: none;
+  outline: none;
+}
+.allCourse_container .allCourse_bar form input {
+  width: 270px;
+  padding: 6px;
+  padding-left: 10px;
+  color: #555;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+.allCourse_container .allcourse_content {
+  border-radius: 5px;
+  font-size: 15px;
+}
+.allCourse_container .allcourse_content h1 {
+  margin-bottom: 2rem;
+  font-size: 23px;
+  font-family: "Roboto", sans-serif;
+}
+.allCourse_container .allcourse_content h1 span {
+  font-weight: 600;
+  border-left: 5px solid #f7aa00;
+  padding-left: 10px;
+}
+.allCourse_container .allcourse_content {
+  padding: 20px;
+}
+.allCourse_container .allcourse_content .allCourse_card {
+  box-shadow: 1px 5px 10px #ddd;
+  padding: 0;
+  width: 280px;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+.allCourse_container .allcourse_content .allCourse_card img {
+  width: 100%;
+  height: 210px;
+}
+.allCourse_container .allcourse_content .allCourse_card .acl_card_content {
+  padding: 10px;
+  padding-bottom: 1rem;
+}
+.allCourse_container .allcourse_content .allCourse_card .acl_card_content a {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+.allCourse_container .allcourse_content .allCourse_card .acl_card_content h5 {
+  font-size: 17px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.allCourse_container .allcourse_content .allCourse_card .acl_card_content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #888;
+  font-family: "Roboto", sans-serif;
+}
+.allCourse_container .allcourse_content .allCourse_card .acl_card_content ul i {
+  margin-right: 3px;
+}
+.allCourse_container .allcourse_content .allCourse_card .acl_card_content p {
+  font-size: 14px;
+  color: #777;
+  font-family: "Roboto", sans-serif;
+}
+
+.course_pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+.course_pagination .next,
+.course_pagination .previous {
+  padding: 10px;
+  box-shadow: 1px 3px 6px #ccc;
+  border-radius: 5px;
+}
+.course_pagination .next i,
+.course_pagination .previous i {
+  font-size: 15px;
+}
+.course_pagination .next:hover,
+.course_pagination .previous:hover {
+  background-color: rgb(0, 81, 255);
+  color: #fff;
+}
+.course_pagination span {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: rgb(0, 81, 255);
+}
+.course_pagination span div {
+  box-shadow: 1px 3px 6px #ccc;
+  display: inline;
+  padding: 13px;
+  font-size: 15px;
+  color: #333;
+  border-radius: 5px;
+}
+.course_pagination span div:hover {
+  background-color: rgb(0, 81, 255);
+  color: #fff;
+}
+.course_pagination span .d1 {
+  margin-right: 10px;
+  background-color: rgb(0, 81, 255);
+  color: #fff;
+}
+.course_pagination span .d2 {
+  margin-left: 10px;
+}
+
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.details_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+}
+.details_container h1 {
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-left: solid 5px #f7aa00;
+  padding-left: 10px;
+}
+.details_container .cr_dt_content .cr_dt_cont {
+  box-shadow: 1px 5px 10px #eee;
+  padding: 10px;
+}
+.details_container .cr_dt_content img {
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+  display: block;
+  height: 300px;
+  margin: 0 auto;
+}
+.details_container .cr_dt_content a {
+  text-decoration: none;
+  max-width: 300px;
+  background-color: rgb(2, 22, 90);
+  color: #eee;
+}
+.details_container .cr_dt_content .sbscribe_btn {
+  border: none;
+  width: 100%;
+  background-color: orange;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+.details_container .cr_dt_content a,
+.details_container .cr_dt_content .sbscribe_btn {
+  display: block;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 6px;
+  margin: 1rem auto;
+}
+.details_container #dt_more_ingo {
+  border-radius: 0 0 5px 5px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.details_container #dt_more_ingo .dt_mr_btn {
+  list-style: none;
+  padding: 0;
+  background-color: #eee;
+  display: flex;
+}
+.details_container #dt_more_ingo .dt_mr_btn button {
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  width: 110px;
+  background-color: #eee;
+}
+.details_container #dt_more_ingo,
+.details_container .dt_mr_btn {
+  border-radius: 10px 10px 0px 0px;
+}
+.details_container #dt_modules {
+  border-radius: 10px 0 0 0;
+  border-right: 1px solid #eee !important;
+}
+.details_container #dt_module_show {
+  padding: 10px;
+}
+.details_container #dt_module_show ul {
+  list-style: none;
+  padding: 0;
+}
+.details_container #dt_module_show ul li {
+  margin-bottom: 10px;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.details_container #dt_module_show ul li div {
+  border: 1px solid rgb(2, 44, 182);
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.details_container #dt_module_show ul li:last-child {
+  border-bottom: none;
+}
+.details_container #dt_desc_show {
+  display: none;
+  padding: 20px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #666;
+  text-transform: capitalize;
+  text-align: justify;
+}
+.details_container #dt_module_show {
+  display: block;
+}
+
+.cr_dt_info div {
+  box-shadow: 1px 5px 10px #ddd;
+  padding: 10px;
+  margin-top: 4rem;
+}
+.cr_dt_info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.cr_dt_info ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: dashed 1px #888;
+  margin-bottom: 1rem;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #555;
+}
+.cr_dt_info ul li .last {
+  color: rgb(199, 129, 0);
+}
+.cr_dt_info a,
+.cr_dt_info button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 13px !important;
+  font-family: "Roboto", sans-serif !important;
+}
+.cr_dt_info .modal-dialog_dl {
+  box-shadow: none;
+  background: transparent;
+}
+.cr_dt_info .modal-dialog_dl .modal-content_dl {
+  box-shadow: none;
+  padding: 0;
+}
+.cr_dt_info .modal-dialog_dl .modal-body_dl {
+  box-shadow: none;
+  background-color: rgb(252, 127, 127);
+  margin-top: 0px;
+  border-radius: 5px 5px 0 0;
+}
+.cr_dt_info .modal-dialog_dl .modal-footer_dl {
+  box-shadow: none;
+  margin-top: 0px;
+  padding: 0;
+}
+
+#subsdcribeForm h2 {
+  border-left: 3px solid #f7aa00;
+  padding-left: 8px;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+#subsdcribeForm label {
+  display: block;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+#subsdcribeForm select,
+#subsdcribeForm input[type=tel],
+#subsdcribeForm input[type=email],
+#subsdcribeForm input[type=text] {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #f7aa00;
+  background-color: #eee;
+  outline: none;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  padding: 3px;
+  color: #444;
+}
+#subsdcribeForm .lab_op {
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+@media (min-width: 405px) {
+  .sbscribe_btn {
+    border: none;
+    width: 300px !important;
+  }
+}
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.course_watch_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+}
+.course_watch_container .cr_wt_bar {
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px #ddd;
+  font-size: 15px;
+  padding: 5px;
+}
+.course_watch_container .cr_wt_bar .dropdown_wt {
+  background: #eee;
+  color: #333;
+  font-size: 15px;
+  padding: 8px;
+  font-family: "Roboto", sans-serif;
+}
+.course_watch_container .cr_wt_bar .dropdown_wt:focus {
+  border: none;
+  outline: none;
+}
+.course_watch_container .cr_wt_content {
+  padding: 10px;
+}
+.course_watch_container iframe {
+  margin-top: 1rem;
+  width: 100%;
+  height: 250px;
+}
+.course_watch_container h1 {
+  font-size: 23px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+.mod_dropdow_container ul li a {
+  display: flex;
+}
+.mod_dropdow_container ul li a div {
+  border: 1px solid rgb(2, 44, 182);
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+@media (min-width: 720px) {
+  iframe {
+    height: 300px !important;
+  }
+}
+@media (min-width: 990px) {
+  iframe {
+    height: 350px !important;
+  }
+}
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+.cr_sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cr_sub form input {
+  padding: 4px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #888;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #333;
+}
+
+.cr_alunos_container {
+  background-color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #ddd;
+  padding: 10px;
+  font-size: 15px;
+}
+.cr_alunos_container .scroll_area {
+  overflow-x: auto;
+}
+
+@media (min-width: 320px) {
+  form input {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 769px) {
+  form input {
+    margin-top: 0;
+  }
+}
+/* MAIN CONTAINER GENERAL CONFIG START ===========================================*/
+table .enrol_name {
+  font-size: 15px;
+  margin: 0;
+  color: #222;
+  font-family: "Roboto", sans-serif;
+}
+table .enrol_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+table .enrolled_info {
+  display: flex;
+  align-items: center;
+}
+table .enrolled_info h5 {
+  margin-left: 10px;
+  color: #555;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+table .enrol_email {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+table .enrol_address,
+table .enrol_phone,
+table .enrol_ocupation,
+table .enrol_country {
+  font-size: 15px;
+  color: #555;
+  font-family: "Roboto", sans-serif;
+}
+table .tr_more {
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  background: rgb(0, 4, 255);
 }
 
 /***** IMPORTING FILE END *****/

@@ -1,0 +1,137 @@
+{{> dashHeader }}
+{{> dashSidebar }}
+<!-- MAIN START -->
+<main>
+    <div class="container">
+        {{!-- Breadcrumbs --}}
+        <div class="curso_breadcrumbs">
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="/dashboard">Home</a></li>
+                    <li><a href="/dashboard/cursos">Cursos</a></li>
+                    <li><a href="#">Novo Curso</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="newCourse_container">
+            <h2>Publicar Curso</h2>
+            {{!-- FORM --}}
+            <form id="newCourseForm" enctype="multipart/form-data">
+                <div class="row">
+                    {{!-- TITLE --}}
+                    <div class="col-11 col-md-5 container-fluid">
+                        <label for="title">Título: <span>*</span></label>
+                        <input type="text" name="title" id="title" placeholder="Escolha um título..." required>
+                    </div>
+                    {{!-- CATEGORY --}}
+                    <div class="col-11 col-md-5 container-fluid">
+                        <label for="category">Escolha uma Categoria: <span>*</span></label>
+                        <select name="category" id="category"  required>
+                            <option selected >Escolha uma categoria</option>
+                            {{#each categoria}}
+                                <option value="{{ id }}"> {{ name }} </option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    {{!-- COUST --}}
+                    <div class="col-11 col-md-5 container-fluid">
+                        <label for="coust">Custo: </label>
+                        <input type="text" name="coust" id="coust" placeholder="40 000,00 kz">
+                        <p>Opcional</p>
+                    </div>
+                    {{!-- NIVEL --}}
+                    <div class="col-11 col-md-5 container-fluid">
+                        <label for="nivel">Nível: </label>
+                        <input type="text" name="nivel" id="nivel" placeholder="Ex: básico ou intermediário">
+                        <p>Opicional</p>
+                    </div>
+                    {{!-- MODULE --}}
+                    <div class="col-12  container-fluid" id="moduleAdd">
+                        <div id="module">
+                            {{!-- Module content goes here --}}
+                        </div>
+                        <button type="button" id="moduleDelete">
+                            <i class="bi bi-trash3"></i></i> Eliminar
+                        </button>
+                        <button type="button" id="moduleButton">
+                            <i class="bi bi-plus-circle"></i> Modulo
+                        </button>
+                    </div>
+                    {{!-- PLAYLIST --}}
+                    <div class="col-11 col-md-5 container-fluid">
+                        <div id="playlistStatus">
+                            <label for="playlist">Playlist: </label>
+                            <input type="text" name="playlist" id="playlist1" placeholder="https://" >
+                        </div>
+                    </div>
+                    {{!-- DATE --}}
+                    <div class="col-11 col-md-5 container-fluid">
+                        <label for="date">Publicado em: <span>*</span></label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
+                    {{!-- DESCRIPTION --}}
+                    <div class="col-11 col-md-8 container-fluid">
+                        <label for="description">Descrição: <span>*</span> </label>
+                        <textarea name="description" id="description" rows="7" required></textarea>
+
+                    </div>
+
+                    {{!-- IMG --}}
+                    <div class="col-11 col-md-8 container-fluid">
+                        <label for="img"> Escolha uma imagem: <span>*</span></label>
+                        <input type="file" name="img" id="img" required>
+                    </div>
+
+                    {{!-- Submit --}}
+                    <button type="submit">Publicar</button>
+                </div>
+                {{!-- ROW END --}}
+            </form>
+            {{!-- FORM END --}}
+        </div>
+
+    </div>
+    {{!-- END CONTAINER --}}
+</main>
+<!-- MAIN END -->
+
+
+<!-- SCRIPT START -->
+<script src="/admin/js/cursos/createCourseModule.js"> </script>
+<!-- SCRIPT END -->
+
+<!-- SCRIPT FOR SEARCH START -->
+<script>
+    const form = document.getElementById('newCourseForm');
+
+    // ADD EVENT TO A FORM =======================================
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // FECTH ===============
+        try {
+            const url = "/dashboard/cursos/publicar/{{ user.id }}";
+            const data = new FormData(form);
+            // Fectch
+            const response = await fetch(url, {
+                method: "POST",
+                body: data,
+            });
+
+            const result = await response.json();
+            console.log(result);
+
+            if(result.message) {
+                location.assign('/dashboard/cursos')
+            }
+
+        } catch (err) {
+            console.log(err);
+        }
+
+    });
+</script>
+<!-- SCRIPT FOR SEARCH END -->
+
+{{> dashFooter }}

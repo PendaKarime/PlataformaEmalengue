@@ -1,3 +1,7 @@
+@import './fonts';
+
+
+
 .google_btn {
     border: 1px solid #eee;
     border-radius: 5px;
@@ -6,11 +10,13 @@
     display: block;
     margin: 0 auto;
     padding: 5px;
-    width: 300px;
+    width: 90%;
     text-align: center;
     margin-bottom: 1rem;
     margin-top: -10px;
-    transition: ease-in-out .4s;
+    transition: ease-in-out .4s; 
+    font-size: 15px;
+    font-family: $roboto;
 }
 .google_btn:hover {
     transform: scale(1.02);

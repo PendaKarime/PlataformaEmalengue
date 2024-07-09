@@ -11,7 +11,9 @@ const passport = require('passport')
 const session = require('express-session')
 require('./models/associations')
 require('./controllers/auth/googleAuth2')
+require('./controllers/admin/mainController')
 require('dotenv').config()
+const helpers = require('./helpers');
 
 //Routes imports
 const homeRoute = require('./routes/site/homeRoute')
@@ -30,7 +32,8 @@ const adminCursoRoute = require('./routes/admin/cursoRoute')
 const googleRoute = require('./routes/auth/googleRoute')
 const crowdfunderRoute = require('./routes/site/crowdfunderRoute')
 const profileRoute = require('./routes/admin/profileRoute')
-
+const userRoute = require('./routes/admin/usersRoute')
+const crowdAdminRoute = require('./routes/admin/crowdfundingRoute')
 
 
 
@@ -44,19 +47,8 @@ app.engine('hbs', handlebars.engine({
     allowProtoPropertiesByDefault: true,
     allowProtoMethodsByDefault: true,
   },
-  helpers: {
-
-    ifIqual: (v1, v2, options) => {
-      if (v1 === v2) {
-        return options.fn(this)
-      } else {
-        return options.inverse(this)
-      }
-
-    },
-   
-
-  }
+  // Handlebars Helpers
+  helpers: helpers
   // partialsDir: 'views/partials',
 }))
 app.set('view engine', 'hbs')
@@ -64,7 +56,7 @@ app.set('view engine', 'hbs')
 
 
 // GOOGLE AUTH =======================================================
-const maxAge = 60000*60*3
+const maxAge = 60000 * 60 * 3
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -72,7 +64,7 @@ app.use(session({
   cookie: { secure: false, maxAge: maxAge }
 }))
 
-app.use(passport.initialize()) 
+app.use(passport.initialize())
 app.use(passport.session())
 
 
@@ -80,7 +72,7 @@ app.get('/auth/google',
   passport.authenticate('google', {
     scope:
       [
-        'email',  
+        'email',
         'profile',
         // 'https://www.googleapis.com/auth/user.phonenumbers.read',
         // 'https://www.googleapis.com/auth/user.addresses.read',
@@ -95,9 +87,9 @@ app.get('/auth/google/callback',
   }));
 
 app.get('/sair', (req, res) => {
-  req.logout( function(err) {
+  req.logout(function (err) {
     res.send('Good bay')
-    req.session.destroy( function (err) {})
+    req.session.destroy(function (err) { })
 
   })
 })
@@ -114,7 +106,7 @@ app.use(cookieParser())
 
 
 /**SERVER =================================================================== */
-// sequelize.sync()
+sequelize.sync()
 
 app.listen(8080, () => {
   console.log('Server up!');
@@ -136,6 +128,8 @@ app.use('/dashboard/freelancer', adminFreeRoute)
 app.use('/dashboard/projeto', adminProjetRoute)
 app.use('/dashboard/cursos', adminCursoRoute)
 app.use('/dashboard/user/profile', profileRoute)
+app.use('/dashboard/users', userRoute)
+app.use('/dashboard/crowdfunding', crowdAdminRoute);
 // For Auth
 app.use('/cadastrar', registerRoute)
 app.use('/', loginRoute)
@@ -144,4 +138,3 @@ app.use('/auth', googleRoute)
 
 
 
-        

@@ -16,6 +16,19 @@
 
 
         {{#ifIqual user.role "admin" }}
+            <h3 class="sd-title"></h3>
+            <ul>
+                <li> 
+                    <a href="/dashboard/users"><i class="bi bi-people-fill"></i>
+                        <span class="sb-content">Usuários</span>
+                    </a>
+
+                </li>
+              
+            </ul>
+        {{/ifIqual }}
+
+        {{#ifIqual user.role "admin" }}
             <h3 class="sd-title">Freelancer</h3>
             <ul>
                 <li> 
@@ -43,6 +56,7 @@
                 </li>
             </ul>
         {{/ifIqual }} --}}
+
         <!-- CURSOS ===========================================================  -->
         <h3 class="sd-title">Cursos</h3>
         <ul>
@@ -52,11 +66,26 @@
                 </a>
             </li>
             <li>
-                <a href="#"><i class="bi bi-file-earmark-plus-fill"></i>
+                <a href="/dashboard/cursos/novocurso"><i class="bi bi-file-earmark-plus-fill"></i>
                     <span class="sb-content">Novo Curso</span>
                 </a>
             </li>
         </ul>
+        <!-- CROWDFUNDING ===========================================================  -->
+        <h3 class="sd-title">Crowdfunding</h3>
+        <ul>
+            <li>
+                <a href="/dashboard/crowdfunding"><i class="bi bi-grid-fill"></i>
+                    <span class="sb-content">Crowdfunding</span>
+                </a>
+            </li>
+            <li>
+                <a href="/dashboard/crowdfunding/novoCrowdfunding"><i class="bi bi-file-earmark-plus-fill"></i>
+                    <span class="sb-content">Novo Crowdfunding</span>
+                </a>
+            </li>
+        </ul>
+      
         <!-- PROJETOS ===========================================================  -->
         <h3 class="sd-title">Projetos</h3>
         <ul>

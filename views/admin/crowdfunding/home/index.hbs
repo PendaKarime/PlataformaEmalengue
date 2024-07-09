@@ -1,0 +1,81 @@
+{{> dashHeader }}
+{{> dashSidebar }}
+<!-- MAIN START -->
+<main>
+    <div class="container">
+        {{!-- Breadcrumbs --}}
+        <div class="crowd_breadcrumbs">
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="/dashboard">Home</a></li>
+                    <li><a href="#">Crowdfunding</a></li>
+                </ul>
+            </div>
+        </div>
+
+        {{!-- MAIN CONTAINER --}}
+        <div class="crf_container">
+            {{!-- Title --}}
+            <h2>Campanhas Publicadas</h2>
+
+            <div class="row d-flex flex-row ">
+
+                {{#each crowdfundig}}
+
+                {{!-- Crowdfunding Card --}}
+                <a href="/dashboard/crowdfunding/detalhes/{{id}}"
+                    class="col-10 col-md-5 col-lg-5 crowd_cart container-fluid">
+                    
+                    <figure>
+                        <img src="/admin/img/crowdfunding/{{ img }}" alt="">
+                        <figcaption>projeto de destaque</figcaption>
+                    </figure>
+                    <!--Content-->
+                    <div class="content">
+                        <h4> {{ titulo }} </h4>
+                        <span> by {{ user.nome }} </span>
+                        <p>{{#TruncateText descricao 80 }} {{/TruncateText }}   </p>
+                    </div>
+                    <div class="detail">
+                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="83"
+                            aria-valuemin="0" aria-valuemax="100">
+                            {{!-- Progress bar marcation --}}
+                            <div class="progress-bar " style="width: {{#transPurcetage transacoes ./valor_meta}}{{/transPurcetage }}% "></div>
+                        </div>
+                        <ul>
+                            {{!-- Purcentagem para chegar a meta --}}
+                            <li class="first">
+                                {{#transPurcetage transacoes ./valor_meta}} {{/transPurcetage }}%
+                            </li>
+                            {{!-- Valo arrecadado --}}
+                            <li class="second">
+                                {{#forCrfValueSum transacoes}}
+                                    {{ valor }}
+                                {{/forCrfValueSum }}
+                                <span>Levantados</span>
+                            </li>
+                            {{!-- Dias restantes --}}
+                            <li class="third">
+                                {{#crowdDuration data duracao}} {{/crowdDuration }} dias
+                                <span>restates</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="local">
+                        <span><i class="bi bi-geo-alt-fill"></i> {{ local }} </span>
+                        <span><i class="bi bi-tag-fill"></i> Jogos</span>
+                    </div>
+
+                </a>
+
+                {{/each}}
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</main>
+{{> dashFooter }}

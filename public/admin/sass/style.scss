@@ -52,7 +52,7 @@ footer {
 
 /***** GENERAL CONFIG END *****/
 
-/***** IMPORTING FILE START *****/
+/* ======================**** IMPORTING FILE START =============================*****/
 @import './header';
 @import './sidebar';
 @import './frRegister';
@@ -65,7 +65,23 @@ footer {
 @import './breadcrumbs';
 @import './update';
 @import './profile';
-@import './emailVerification';
+@import './emailVerification'; 
+@import './_users/users'; 
+@import './home/statistic_cards';  
+@import './crowd/crowd';  
+@import './crowd/crfMain';  
+@import './crowd/cards';  
+@import './crowd/details';  
+@import './crowd/update';  
+@import './alert/alertMessage';  
+@import './course/main';  
+@import './course/index';  
+@import './course/details';  
+@import './course/watch';  
+@import './course/alunos';  
+@import './course/enrolled';  
+
+
 
 
 
